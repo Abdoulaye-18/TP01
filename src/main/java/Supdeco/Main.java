@@ -8,7 +8,7 @@ public class Main {
 
         System.out.printf("Gestion des Etudiants \n");
 
-        Etudiant e1 = new Etudiant(1,"Gueye","El hadji",12);
+        Etudiant e1 = new Etudiant("Gueye","El hadji","Elhadj@gmail.com","A2265");
         System.out.printf(e1.toString());
     }
 }

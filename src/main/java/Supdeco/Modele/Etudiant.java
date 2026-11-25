@@ -1,66 +1,27 @@
 package Supdeco.Modele;
 
-public class Etudiant {
+public class Etudiant extends Personne {
 
-    private int id;
-    private String nom;
-    private String prenom;
-    private double moyenne;
+    private String matricule;
 
-
-    // Constructeur
-
-    public Etudiant(int id, String nom, String prenom, double moyenne) {
-        this.id = id;
-        this.nom = nom;
-        this.prenom = prenom;
-        this.moyenne = moyenne;
-    }
-
-    // Getters and setters
-    public int getId() {
-        return id;
-    }
-
-    public void setId(int id) {
-        this.id = id;
-    }
-
-    public String getNom() {
-        return nom;
-    }
-
-    public void setNom(String nom) {
-        this.nom = nom;
-    }
-
-    public String getPrenom() {
-        return prenom;
-    }
-
-    public void setPrenom(String prenom) {
-        this.prenom = prenom;
-    }
-
-    public double getMoyenne() {
-        return moyenne;
-    }
-
-    public void setMoyenne(double moyenne) {
-        this.moyenne = moyenne;
+    public Etudiant(String nom, String prenom, String email, String matricule) {
+        super(nom, prenom, email);
+        this.matricule = matricule;
     }
 
 
-    // Methode toString
-
+    @Override
+    public String getRole() {
+        return "Etudiant";
+    }
 
     @Override
     public String toString() {
         return "Etudiant{" +
-                "id=" + id +
+                "matricule='" + matricule + '\'' +
                 ", nom='" + nom + '\'' +
                 ", prenom='" + prenom + '\'' +
-                ", moyenne=" + moyenne +
+                ", email='" + email + '\'' +
                 '}';
     }
 }
